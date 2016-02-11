@@ -1,7 +1,8 @@
 'use strict';
 
 import React, {View, Text, StyleSheet, Component, AsyncStorage, TouchableHighlight, LinkingIOS, } from 'react-native';
-import Settings from './Settings.js';
+import Settings from './Settings';
+import AppTabBar from './AppTabBar';
 
 const {API_KEY, SECRET, REDIRECT_URI} = Settings;
 
@@ -67,7 +68,8 @@ class LoginView extends Component {
 		if (!this.state.login) {	// 用户未登录
 			return (<LoginReminderView updateLoginStatus={this.updateLoginStatus.bind(this)}/>);
 		} else {					// 用户已登录
-			return <View style={styles.container}><Text style={styles.welcome}>{this.state.douban_user_name}</Text></View>
+			// return <View style={styles.container}><Text style={styles.welcome}>{this.state.douban_user_name}</Text></View>
+			return (<AppTabBar access_token={this.state.access_token} />);
 		}
 		// jshint ignore: end
 	}
