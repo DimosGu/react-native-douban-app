@@ -1,3 +1,5 @@
+**本来准备在 2016 春节期间重构这个项目并且完成的，但是豆瓣停止了个人开发者的全部 API 权限，所以只能暂时作罢。**
+
 # Install
 
 To run this app (named Watched, temporarily) on your own device, you should follow the steps:
